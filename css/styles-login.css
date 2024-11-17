@@ -1,0 +1,75 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #44444444;
+    color: #444;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal-login {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 30px; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.355);
+}
+
+.campo-login {
+    color: rgb(109, 108, 108);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.355);
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px;
+    padding: 65px;
+}
+
+.campo-login label {
+    font-size: 1.15em; 
+}
+
+.campo-login input {
+    width: 100%;
+    border: 1px solid rgb(174, 173, 173);
+    padding: 12px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    transition: box-shadow 0.4s ease;
+}
+
+.campo-login input:focus {
+    outline: none;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.215);
+}
+
+.campo-login input,
+.campo-login button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+button.botao-entrar {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+    padding: 12px;
+    cursor: pointer;
+    background-color: rgba(220, 220, 220, 0.563);
+    border: 1px solid rgb(126, 126, 126);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
