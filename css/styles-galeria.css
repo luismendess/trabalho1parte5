@@ -17,6 +17,14 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 6px;
+    font-size: 1.9em;
+}
+
+header h1,
+.titulo-nossa-estrutura,
+.titulo-footer,
+footer p {
+    font-size: calc(0.5em + 1vw);
 }
 
 nav {
@@ -25,10 +33,8 @@ nav {
     background-color: #555555;
     color: white;
     padding: 8px;
-    text-align: space-around;
     margin: 1px auto;
     margin-bottom: 6px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 nav ul {
@@ -39,12 +45,14 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     padding: 5px 10px;
+    font-size: calc(0.5em + 0.5vw);
 }
 
 nav a:hover {
@@ -61,29 +69,35 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .imagens-estrutura {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 20px;
-    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    padding: 5px;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
 .imagens-estrutura td {
     text-align: center;
 }
 
-.titulo-nossa-estrutura{
+.titulo-nossa-estrutura {
     margin-top: 30px;
     justify-items: left;
-    text-align: justify;
-    margin-left: 30px;
+    text-align: start;
 }
 
 .imagens-estrutura img {
     width: 100%;
-    max-width: 160;
+    height: auto;
+    max-width: 200px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -97,8 +111,7 @@ footer {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     width: 70%;
     border-radius: 10px;
-    text-align: space-evenly;
-    margin: 0px auto;
+    margin: 0 auto;
     margin-bottom: 20px;
     line-height: 1.3;
 }
@@ -112,18 +125,19 @@ footer {
     padding: 15px;
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .titulo-footer {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin: 15px 0;
     color: wheat;
 }
 
 footer b {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: rgb(228, 230, 232);
     text-decoration: none;
 }
@@ -136,10 +150,104 @@ footer p {
     min-width: 120px;
     text-align: center;
     padding: 0 15px;
+    font-size: 1em;
 }
 
-body {
-    background-color: rgb(193, 193, 193);
-    margin: 0;
-    padding: 0;
+@media screen and (max-width: 768px) {
+
+    header,
+    nav,
+    .principal-galeria,
+    footer {
+        justify-items: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    .imagens-estrutura {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px;
+    }
+
+    .imagens-estrutura img {
+        max-width: 140px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px 20px;
+        font-size: calc(0.9em + 0.5vw);
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+    header h1,
+    .titulo-nossa-estrutura,
+    .titulo-footer,
+    footer p {
+        align-items: center;
+        font-size: calc(1.2em + 1vw);
+    }
+
+    footer p {
+        align-items: center;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header,
+    nav,
+    .principal-galeria,
+    footer {
+        width: 70%;
+    }
+
+    .imagens-estrutura {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imagens-estrutura img {
+        max-width: 120px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px 20px;
+        font-size: calc(0.8em + 0.5vw);
+    }
+
+    header h1,
+    .titulo-nossa-estrutura,
+    .titulo-footer,
+    footer p {
+        align-items: center;
+        font-size: calc(1em + 1vw);
+    }
+
+    footer p {
+        align-items: center;
+        font-size: 0.7em;
+    }
 }

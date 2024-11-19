@@ -14,7 +14,7 @@ body {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
-    padding: 30px; 
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.355);
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .campo-login label {
-    font-size: 1.15em; 
+    font-size: 1.15em;
 }
 
 .campo-login input {
@@ -72,4 +72,28 @@ button.botao-entrar {
     background-color: rgba(220, 220, 220, 0.563);
     border: 1px solid rgb(126, 126, 126);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .campo-login {
+        padding: 50px;
+    }
+
+    .campo-login input,
+    .campo-login button {
+        font-size: 1em;
+        padding: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .campo-login {
+        padding: 40px;
+    }
+
+    .campo-login input,
+    .campo-login button {
+        font-size: 0.9em;
+        padding: 3px;
+    }
 }
